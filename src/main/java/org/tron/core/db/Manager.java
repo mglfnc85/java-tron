@@ -473,9 +473,9 @@ public class Manager {
       throw new ValidateSignatureException("trans sig validate failed");
     }
 
-    validateTapos(trx);
+//    validateTapos(trx);
 
-    validateCommon(trx);
+//    validateCommon(trx);
 
     //validateFreq(trx);
     synchronized (this) {
@@ -883,7 +883,7 @@ public class Manager {
     final List<Actuator> actuatorList = ActuatorFactory.createActuator(trxCap, this);
     TransactionResultCapsule ret = new TransactionResultCapsule();
 
-    consumeBandwidth(trxCap);
+//    consumeBandwidth(trxCap);
 
     for (Actuator act : actuatorList) {
       act.validate();
@@ -1214,10 +1214,10 @@ public class Manager {
   }
 
   public boolean isTooManyPending() {
-    if (getPendingTransactions().size() + PendingManager.getTmpTransactions().size()
-        > MAX_TRANSACTION_PENDING) {
-      return true;
-    }
+//    if (getPendingTransactions().size() + PendingManager.getTmpTransactions().size()
+//        > MAX_TRANSACTION_PENDING) {
+//      return true;
+//    }
     return false;
   }
 
