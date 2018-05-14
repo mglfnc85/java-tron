@@ -473,9 +473,9 @@ public class Manager {
       throw new ValidateSignatureException("trans sig validate failed");
     }
 
-    validateTapos(trx);
-
-    validateCommon(trx);
+//    validateTapos(trx);
+//
+//    validateCommon(trx);
 
     //validateFreq(trx);
     synchronized (this) {
@@ -883,7 +883,7 @@ public class Manager {
     final List<Actuator> actuatorList = ActuatorFactory.createActuator(trxCap, this);
     TransactionResultCapsule ret = new TransactionResultCapsule();
 
-    consumeBandwidth(trxCap);
+//    consumeBandwidth(trxCap);
 
     for (Actuator act : actuatorList) {
       act.validate();
